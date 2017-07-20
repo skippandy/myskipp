@@ -40,6 +40,7 @@ function formval (){
 		var RESOLUTION	   = $("#RESOLUTION").val();
 		// var USERNAME	   = $("#USERNAME").val();
 		var DATE_REPAIRED  = $("#DATE_REPAIRED").val();
+		console.log(DATE_REPAIRED);
 		var DATE_DISPATCHED = $("#DATE_DISPATCHED").val();
 		var TECHNICHIAN		= $("#TECHNICHIAN").val();
 		console.log(SERIAL_NO);
@@ -187,7 +188,37 @@ function search_device(){
 }
 
 
+// -------search_by_id codes
+	function search_by_id(){
+		var search_id = $("#SEARCH").val();
+
+		console.log(search_id);
+
+		$.ajax({
+			url:'search_by_id.php',
+			type: 'POST',
+			data:{SEARCH:true,search_id:search_id},
+			success:function(data){
+				console.log(data);
+				$("#tboody").html('');
+				$("#tboody").append(data);
+			}
+
+		});
+		return false;
+	}
+
+// search_by_id codes
 
 
+
+
+
+
+
+
+
+
+// search by name
 
 

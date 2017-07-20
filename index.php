@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+     session_start();
+    // $_SESSION['BANKID'] = true;
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -49,12 +54,12 @@
             </div>
             <div id="passworderror"></div>
             <!-- <div id="error"></div> -->
-            <label class="checkbox">
+           <!--  <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
-            <button class="btn btn-primary btn-lg btn-block" id="sub" type="submit">Login</button>
-            <label class="label label-primary label-lg" ><a href="signup.php">Signup</a></label>
+            </label> -->
+            <button class="btn btn-info btn-lg btn-block" id="sub" type="submit">Login</button>
+            <label class="btn btn-basic btn-lg btn-block" ><a href="signup.php">signup</a></label>
         </div>
       </form>
     <div class="text-right">

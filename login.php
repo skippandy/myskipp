@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ <!--  -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -55,7 +56,7 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
             <button class="btn btn-primary btn-lg btn-block" id="sub" type="submit">Login</button>
-            <label class="label label-primary label-lg" ><a href="signup.php">Signup</a></label>
+            <label class=><a href="signup.php">click here to register as a new user</a></label>
         </div>
       </form>
     <div class="text-right">

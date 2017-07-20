@@ -1,4 +1,5 @@
 <?php
+session_start();
     include_once('connect.php');
     if(isset($_POST['login1'])){
 
@@ -9,12 +10,14 @@
         $result = mysqli_query($connect,$sql);
         $num=mysqli_num_rows($result);
         echo $num;
-        // if($num == 1){
-        //         echo "done";
-        // }else {
+        if($num == 1){
+                //echo "done";
+        $_SESSION['BANKID'] = $ID;
+        // else{
         //     echo "no";
         // }
     }
+}
    
 
 
@@ -23,6 +26,7 @@
                     $sql = "SELECT * FROM RETRIEVE WHERE SERIAL_NO = '$searchId'";
                     $result=mysqli_query($connect,$sql);
                     $row=mysqli_fetch_assoc($result);
+                    
                     $equipment_make=$row['EQUIPMENT_MAKE'];
                     $username=$row['USERNAME'];
                     $department=$row['DEPARTMENT'];

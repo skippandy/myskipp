@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -52,7 +55,7 @@
                 <ul class="nav top-menu">                    
                     <li>
                         <form class="navbar-form">
-                            <input class="form-control" placeholder="Search" type="text">
+                            <input class="form-control" placeholder="Search by serial number" type="text" id="SEARCH" onkeyup ="search_by_id()">
                         </form>
                     </li>                    
                 </ul>
@@ -262,16 +265,20 @@
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="profile-ava">
+                           <!--  <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
+                            </span> -->
+                            <span class="username man">
+                                 <?php 
+                                 echo $_SESSION['BANKID'];
+                                 ?>
                             </span>
-                            <span class="username man"></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li class="eborder-top">
-                          <!--       <a href="#"><i class="icon_profile"></i> My Profile</a>
+                         <!--        <a href="#"><i class="icon_profile"></i> My Profile</a>
                             </li>
                             <li>
                                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -320,7 +327,7 @@
                       <ul class="sub">
                          <!--  <li><a class="" href="form_component.php">Form Elements</a></li>   -->                        
                           <li><a class="" href="form_validation.php">ADD ASSET</a></li>
-                           <li><a class="" href="other_form.php">DISPATCHED ASSET</a></li>
+                          <!--  <li><a class="" href="other_form.php">DISPATCHED ASSET</a></li> -->
                       </ul>
                   </li>       
                <!--    <li class="sub-menu">
@@ -362,11 +369,11 @@
                   </li>
                   
                   <li class="sub-menu ">
-                      <a href="javascript:;" class="">
+                    <!--   <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
                           <span>Pages</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+                      </a> -->
                       <ul class="sub">                          
                           <!-- <li><a class="" href="profile.php">Profile</a></li> -->
                           <li><a class="" href="login.php"><span>Login Page</span></a></li>
@@ -394,7 +401,8 @@
                     </ol> -->
                 </div>
             </div>
-            <table class="table table-striped table-condensed table-bordered" >
+            <div>
+            <table class="table table-striped table-condensed table-bordered" id="man">
                 
                     <tr>
                         <th><b>DATE RECEIVED</b></th>
@@ -412,7 +420,10 @@
                         
 
                     </tr>
+                    <tbody id="tboody">
                 <?php
+                    
+
                 include_once('connect.php');
                 $sql = "SELECT * FROM scb1";
                 $result = mysqli_query($connect,$sql);
@@ -454,7 +465,9 @@
                     echo $html;
                 
                 ?>
+                    </tbody>
                 </table>
+            </div>
               <!-- page start-->
  <!--         <div class="table-responsive" style="overflow:auto;height:500px">
         <table class="table table-striped">

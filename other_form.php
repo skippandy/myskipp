@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,15 +68,15 @@
                     
                     <!-- task notificatoin start -->
                     <li id="task_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                       <!--  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-task-l"></i>
                             <span class="badge bg-important">5</span>
-                        </a>
+                        </a> -->
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
+                           <!--  <li>
                                 <p class="blue">You have 5 pending tasks</p>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#">
                                     <div class="task-info">
@@ -91,23 +93,23 @@
                             <li>
                                 <a href="#">
                                     <div class="task-info">
-                                        <div class="desc">
+                                        <!-- <div class="desc">
                                             Project 1
-                                        </div>
-                                        <div class="percent">30%</div>
+                                        </div> -->
+                                       <!--  <div class="percent">30%</div> -->
                                     </div>
                                     <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                      <!--   <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
                                             <span class="sr-only">30% Complete (warning)</span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <div class="task-info">
-                                        <div class="desc">Digital Marketing</div>
-                                        <div class="percent">80%</div>
+                                        <!-- <div class="desc">Digital Marketing</div>
+                                        <div class="percent">80%</div> -->
                                     </div>
                                     <div class="progress progress-striped">
                                         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
@@ -151,12 +153,12 @@
                     <!-- task notificatoin end -->
                     <!-- inbox notificatoin start-->
                     <li id="mail_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                     <!--    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-envelope-l"></i>
-                            <span class="badge bg-important">5</span>
-                        </a>
+                           <!--  <span class="badge bg-important">5</span>
+                        </a> -->
                         <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-blue"></div>
+                            <!-- <div class="notify-arrow notify-arrow-blue"></div>
                             <li>
                                 <p class="blue">You have 5 new messages</p>
                             </li>
@@ -210,17 +212,17 @@
                             </li>
                             <li>
                                 <a href="#">See all messages</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <!-- inbox notificatoin end -->
                     <!-- alert notification start-->
                     <li id="alert_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                       <!--  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
                             <i class="icon-bell-l"></i>
                             <span class="badge bg-important">7</span>
-                        </a>
+                        </a> -->
                         <ul class="dropdown-menu extended notification">
                             <div class="notify-arrow notify-arrow-blue"></div>
                             <li>
@@ -264,17 +266,19 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                           <!--      <img alt="" src="img/avatar1_small.jpg"> -->
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">  <?php 
+                                 echo $_SESSION['BANKID'];
+                                 ?></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
-                            <li class="eborder-top">
+                          <!--   <li class="eborder-top">
                                 <a href="#"><i class="icon_profile"></i> My Profile</a>
-                            </li>
-                            <li>
+                            </li> -->
+                          <!--   <li>
                                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
                             </li>
                             <li>
@@ -282,7 +286,7 @@
                             </li>
                             <li>
                                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="login.php"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
@@ -321,7 +325,7 @@
                       <ul class="sub">
                          <!--  <li><a class="" href="form_component.php">Form Elements</a></li>   -->                        
                           <li><a class="" href="form_validation.php">ADD ASSET</a></li>
-                           <li><a class="" href="other_form.php">DISPATCHED ASSET</a></li>
+                          <!--  <li><a class="" href="other_form.php">DISPATCHED ASSET</a></li> -->
                       </ul>
                   </li>       
                <!--    <li class="sub-menu">
@@ -363,11 +367,11 @@
                   </li>
                   
                   <li class="sub-menu ">
-                      <a href="javascript:;" class="">
+                    <!--   <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
                           <span>Pages</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+                      </a> -->
                       <ul class="sub">                          
                          <!--  <li><a class="" href="profile.php">Profile</a></li>
                           <li><a class="" href="login.php"><span>Login Page</span></a></li>
@@ -432,7 +436,7 @@
                             </div>
                              <div>
                                 <label class="col-sm-2 control-label">  RESOLUTION</label>
-                                <input type="text" name = "RESOLUTION" required   id="RESOLUTION" class="form-control"  rel="enter your date plss">
+                                <input type="text" name = "RESOLUTION"    id="RESOLUTION" class="form-control"  rel="enter your date plss">
                             </div>
                            <!--   <div>
                                 <label class="col-sm-2 control-label">  USERNAME</label>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2017 at 03:57 PM
+-- Generation Time: Jul 20, 2017 at 01:42 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -40,7 +40,8 @@ CREATE TABLE `RETRIEVE` (
 --
 
 INSERT INTO `RETRIEVE` (`ID`, `SERIAL_NO`, `EQUIPMENT_MAKE`, `DEPARTMENT`, `USERNAME`, `STATUS`) VALUES
-(1, '1234', 'DELL LATITUDE', 'TRADE', 'ANDREWS', '');
+(1, '1234', 'DELL LATITUDE', 'TRADE', 'ANDREWS', ''),
+(2, '13333', 'DELL LATITUDE', 'ITO', 'STEVEN KANDA', '');
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,9 @@ CREATE TABLE `SCB1` (
 --
 
 INSERT INTO `SCB1` (`ID`, `DATE_RECEIVED`, `EQUIPMENT_MAKE`, `SERIAL_NO`, `DEPARTMENT`, `ISSUE`, `RESOLUTION`, `USERNAME`, `DATE_REPAIRED`, `DATE_DISPATCHED`, `TECHNICHIAN`) VALUES
-(52, '2017-07-06', 'DELL LATITUDE', '1234', 'TRADE', 'domain issue', 'rebuild', 'ANDREWS', '2017-07-07', '0000-00-00', 'SOLOMON DEGBLOR');
+(66, '2017-07-14', 'dell latitude 6430', '143556', 'ITO', 'machine keeps restarting', 'eeeee', 'Philip', '2017-07-16', '2017-07-16', 'EUGENE VAN-DANIEL'),
+(67, '2017-07-14', 'DELL LATITUDE', '1234', 'TRADE', 'select your issue', 'QQ', 'ANDREWS', '2017-07-16', '2017-07-16', 'SOLOMON DEGBLOR'),
+(68, '2017-07-14', 'DELL LATITUDE', '13333', 'ITO', '', '', 'STEVEN KANDA', '0000-00-00', '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -76,7 +79,7 @@ INSERT INTO `SCB1` (`ID`, `DATE_RECEIVED`, `EQUIPMENT_MAKE`, `SERIAL_NO`, `DEPAR
 --
 
 CREATE TABLE `signup` (
-  `ID` int(50) NOT NULL,
+  `ID` varchar(50) NOT NULL,
   `PASSWORD` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -85,12 +88,15 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`ID`, `PASSWORD`) VALUES
-(1389200, 'Bernice@12345'),
-(12345, 'admin'),
-(0, ''),
-(0, ''),
-(0, ''),
-(88888, 'tell');
+('1389200', 'Bernice@12345'),
+('12345', 'admin'),
+('0', ''),
+('0', ''),
+('0', ''),
+('88888', 'tell'),
+('0', 'ama'),
+('33333', '33333'),
+('andrews', 'andrews');
 
 --
 -- Indexes for dumped tables
@@ -117,12 +123,12 @@ ALTER TABLE `SCB1`
 -- AUTO_INCREMENT for table `RETRIEVE`
 --
 ALTER TABLE `RETRIEVE`
-  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `SCB1`
 --
 ALTER TABLE `SCB1`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

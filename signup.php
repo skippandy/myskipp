@@ -72,10 +72,10 @@
                 <input type="password" class="form-control" required id="CONFIRMPASSWORD" placeholder="Password">
             </div>
             <div id="error"></div>
-            <label class="checkbox">
+           <!--  <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
+            </label> -->
            <!--  <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button> -->
             <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
         </div>

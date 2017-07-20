@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,16 +68,16 @@
                     
                     <!-- task notificatoin start -->
                     <li id="task_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-task-l"></i>
                             <span class="badge bg-important">5</span>
-                        </a>
+                        </a> -->
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
+                          <!--   <li>
                                 <p class="blue">You have 5 pending tasks</p>
-                            </li>
-                            <li>
+                            </li> -->
+                           <!--  <li>
                                 <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Design PSD </div>
@@ -87,8 +89,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                          <!--   <li>
                                 <a href="#">
                                     <div class="task-info">
                                         <div class="desc">
@@ -102,8 +104,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                           <!--  <li>
                                 <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Digital Marketing</div>
@@ -115,8 +117,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                         <!--    <li>
                                 <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Logo Designing</div>
@@ -128,8 +130,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                        <!--     <li>
                                 <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Mobile App</div>
@@ -145,22 +147,22 @@
                             </li>
                             <li class="external">
                                 <a href="#">See All Tasks</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <!-- task notificatoin end -->
                     <!-- inbox notificatoin start-->
                     <li id="mail_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                       <!--  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-envelope-l"></i>
                             <span class="badge bg-important">5</span>
-                        </a>
+                        </a> -->
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
+                          <!--   <li>
                                 <p class="blue">You have 5 new messages</p>
-                            </li>
-                            <li>
+                            </li> -->
+                         <!--    <li>
                                 <a href="#">
                                     <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>
                                     <span class="subject">
@@ -171,8 +173,8 @@
                                         I really like this admin panel.
                                     </span>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                           <!--  <li>
                                 <a href="#">
                                     <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>
                                     <span class="subject">
@@ -183,8 +185,8 @@
                                      Hi, What is next project plan?
                                     </span>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                     <!--        <li>
                                 <a href="#">
                                     <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>
                                     <span class="subject">
@@ -195,8 +197,8 @@
                                         I am like to buy this Admin Template.
                                     </span>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                     <!--        <li>
                                 <a href="#">
                                     <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>
                                     <span class="subject">
@@ -207,23 +209,23 @@
                                         Icon fonts are great.
                                     </span>
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                           <!--  <li>
                                 <a href="#">See all messages</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <!-- inbox notificatoin end -->
                     <!-- alert notification start-->
                     <li id="alert_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                       <!--  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
                             <i class="icon-bell-l"></i>
                             <span class="badge bg-important">7</span>
-                        </a>
+                        </a> -->
                         <ul class="dropdown-menu extended notification">
                             <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
+                           <!--  <li>
                                 <p class="blue">You have 4 new notifications</p>
                             </li>
                             <li>
@@ -256,25 +258,29 @@
                             </li>                            
                             <li>
                                 <a href="#">See all notifications</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                     <!-- alert notification end-->
-                    <!-- user login dropdown start-->
+                    <!--  user login dropdown start -->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                               <!--  <img alt="" src="img/avatar1_small.jpg"> -->
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">
+                                 <?php 
+                                 echo $_SESSION['BANKID'];
+                                 ?>
+                            </span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
-                            <li class="eborder-top">
+                          <!--   <li class="eborder-top">
                                 <a href="#"><i class="icon_profile"></i> My Profile</a>
-                            </li>
-                            <li>
+                            </li> -->
+                          <!--   <li>
                                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
                             </li>
                             <li>
@@ -282,16 +288,16 @@
                             </li>
                             <li>
                                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="login.php"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
-                           <!--  <li>
+                       <!--      <li>
                                 <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
                             </li>
                             <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
-                            </li> -->
+                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a> -->
+                            </li>
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
@@ -321,7 +327,7 @@
                       <ul class="sub">
                          <!--  <li><a class="" href="form_component.php">Form Elements</a></li>   -->                        
                           <li><a class="" href="form_validation.php">ADD ASSET</a></li>
-                           <li><a class="" href="other_form.php">DISPARTCHED ASSET</a></li>
+                          <!--  <li><a class="" href="other_form.php">DISPARTCHED ASSET</a></li> -->
                       </ul>
                           
                <!--    <li class="sub-menu">
@@ -363,11 +369,11 @@
                   </li>
                   
                   <li class="sub-menu ">
-                      <a href="javascript:;" class="">
+                     <!--  <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
                           <span>Pages</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
+                      </a> -->
                       <ul class="sub">                          
                          <!--  <li><a class="" href="profile.php">Profile</a></li>
                           <li><a class="" href="login.php"><span>Login Page</span></a></li>
@@ -482,7 +488,7 @@
   </section>
   <!-- container section end -->
     <!-- javascripts -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
     <script src="js/formval.js"></script>

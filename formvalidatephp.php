@@ -56,7 +56,7 @@ session_start();
         if($result){
             
              //header('Location: basic_table.php');
-             echo 1;
+             echo $DATE_REPAIRED;
         }else{
 
          echo " couldnt entered";
