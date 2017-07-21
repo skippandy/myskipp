@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
     session_start();
+    
+    if (!isset($_SESSION['BANKID'])) {
+        header('Location: login.php');
+    }
 ?>
 <html lang="en">
   <head>
