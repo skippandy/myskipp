@@ -3,12 +3,12 @@
 
    if(isset($_POST['signup1'])){
 
-    $BANKID = $_POST['BANKID'];
-    $PASSWORD = $_POST['PASSWORD'];
-    // $CONFIRMPASSWORD = $_POST['CONFIRMPASSWORDPASSWORD'];
+    $bankId = $_POST['BANKID'];
+    $password = $_POST['PASSWORD'];
+    $password_enc = md5($password);
 
     
-   $sql = "INSERT INTO signup (ID,PASSWORD) VALUE ('$BANKID','$PASSWORD')";
+   $sql = "INSERT INTO signup (ID,PASSWORD) VALUES ('$bankId','$password_enc')";
    $result = mysqli_query($connect,$sql);
    if($result){
     echo "one row inserted";
@@ -56,7 +56,7 @@
 
     <div class="container">
 
-       <form class="login-form" onsubmit="return signup1()">        
+       <form class="login-form" onsubmit="return signup1()" autocomplete="off">        
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
             <div class="input-group">
